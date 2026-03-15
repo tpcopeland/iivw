@@ -1,0 +1,34 @@
+Package: iivw
+Title: Inverse Intensity and Visit Weighting for Longitudinal Data
+Version: 1.0.0
+Date: 2026-03-15
+Authors@R: person("Timothy P", "Copeland", role = c("aut", "cre"),
+    email = "timothy.copeland@ki.se",
+    comment = c(ORCID = "0000-0003-2801-7928"))
+Description: Implements inverse intensity weighting (IIW), inverse probability
+    of treatment weighting (IPTW), and their combination (FIPTIW) for
+    longitudinal studies with irregular visit patterns. IIW corrects for
+    outcome-dependent visit frequency using Andersen-Gill counting-process
+    Cox models (Buzkova & Lumley 2007). IPTW corrects for treatment
+    confounding via propensity scores. FIPTIW combines both corrections
+    (Tompkins, Dubin & Wallace 2025). Provides weight computation and
+    weighted outcome model fitting with GEE or mixed model estimation.
+License: MIT + file LICENSE
+URL: https://github.com/tpcopeland/iivw
+BugReports: https://github.com/tpcopeland/iivw/issues
+Depends:
+    R (>= 4.0.0)
+Imports:
+    survival,
+    sandwich,
+    splines,
+    stats
+Suggests:
+    lme4,
+    testthat (>= 3.0.0),
+    IrregLong,
+    nlme
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Config/testthat/edition: 3
